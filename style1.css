@@ -1,3 +1,4 @@
+```css
 * {
     box-sizing: border-box;
     margin: 0;
@@ -15,7 +16,6 @@ body {
 
 .wrapper {
     display: grid;
-    
     align-items: center;
     gap: 2rem;
     min-height: 100vh;
@@ -28,43 +28,45 @@ body {
 .content {
     text-align: center;
     padding-top: 2rem;
+    max-width: 100%;
+}
 
-  
 
-    justify-content: center;
-    .heading {
+/* HEADING */
+
+.content .heading {
     font-weight: 800;
     font-size: 2.5rem;
     line-height: 1.2;
+    margin-bottom: 1rem;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
+/* PARAGRAPH */
 
-
-.p1 {
+.content .p1 {
     font-size: 1rem;
     line-height: 1.5;
     text-align: center;
+    margin-bottom: 1rem;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
-}
-
-
-
-
-
 
 
 /* BUTTON */
 
 .btn {
     border-radius: 16px;
-
     background-color: black;
     color: white;
-
     align-self: center;
-
     padding: 1rem 2rem;
+    margin-bottom: 1rem;
 }
 
 
@@ -72,12 +74,9 @@ body {
 
 .img-list {
     display: grid;
-
     grid-template-columns: repeat(4, 1fr);
-
     gap: 0.8rem;
 }
-
 
 .img-list img {
     width: 100%;
@@ -85,42 +84,82 @@ body {
 }
 
 
+/* RESPONSIVE */
 
-
-@media (max-width: 540px) {
+@media (max-width: 768px) {
 
     .wrapper {
         grid-template-columns: 1fr;
         padding: 1rem;
     }
 
-
     .content {
-        margin-top: -20px;
+        padding-top: 1rem;
     }
 
-
-    .heading {
-        font-size: 40px;
-        line-height: 1.2;
+    .content .heading {
+        font-size: 2rem;
+        max-width: 90%;
     }
 
-
-    .p1 {
-        font-size: 16px;
-        line-height: 1.5;
+    .content .p1 {
+        max-width: 90%;
     }
-
 
     .img-list {
         grid-template-columns: repeat(1, 1fr);
         gap: 8px;
-        margin-top: -25px;
     }
-
 
     .img-list img {
         border-radius: 12px;
     }
-
 }
+
+/* RESPONSIVE - 540px */
+
+@media (max-width: 540px) {
+
+    .wrapper {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+
+    .content {
+        padding-top: 0.5rem;
+    }
+
+    .content .heading {
+        font-size: 1.8rem;
+        line-height: 1.2;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .content .p1 {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .btn {
+        padding: 0.8rem 1.5rem;
+        border-radius: 12px;
+        font-size: 0.95rem;
+    }
+
+    .img-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.6rem;
+    }
+
+    .img-list img {
+        border-radius: 10px;
+    }
+}
+
+
