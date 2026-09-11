@@ -86,89 +86,34 @@ body {
 
 /* RESPONSIVE */
 
-@media (max-width: 768px) {
-
-    .wrapper {
-        grid-template-columns: 1fr;
-        padding: 1rem;
-    }
-
-    .content {
-        padding-top: 1rem;
-    }
-
-    .content .heading {
-        font-size: 2rem;
-        max-width: 90%;
-    }
-
-    .content .p1 {
-        max-width: 90%;
-    }
-
-    .img-list {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 8px;
-    }
-
-    .img-list img {
-        border-radius: 12px;
-    }
-}
-
-@media (max-width: 540px) {
-
-    .wrapper {
-        grid-template-columns: 1fr;
-        padding: 1rem;
-        gap: 1.5rem;
-        min-height: 100vh;
-    }
-
-    .content {
-        padding-top: 0.5rem;
-        width: 100%;
-    }
-
-    /* HEADING */
-
-    .content .heading {
-        font-size: 2rem;
-        line-height: 1.15;
-        max-width: 100%;
-        margin: 0 auto 1rem;
-    }
-
-    /* PARAGRAPH */
-
-    .content .p1 {
-        font-size: 1rem;
-        line-height: 1.45;
-        max-width: 100%;
-        margin: 0 auto 1.2rem;
-    }
-
-    /* BUTTON */
-
-    .btn {
-        display: inline-block;
-        padding: 0.9rem 2rem;
-        margin-bottom: 0.5rem;
-        border-radius: 14px;
-        font-size: 1rem;
-    }
-
-    /* IMAGE GRID */
-
-    .img-list {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.6rem;
-    }
-
-    .img-list img {
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-        border-radius: 12px;
-    }
-}
+@media (max-width: 768px) 
+{
+     .wrapper { grid-template-columns: 1fr; padding: 1rem; } 
+     .content { padding-top: 1rem; } 
+     .content .heading { font-size: 2rem; max-width: 90%; }
+      .content .p1 { max-width: 90%; }
+       .img-list { grid-template-columns: repeat(2, 1fr); gap: 8px; } 
+       .img-list img { border-radius: 12px; }
+     } 
+       /* PHONE */ @media (max-width: 540px) { 
+        .wrapper { 
+            grid-template-columns: 1fr; 
+            padding: 1rem; 
+            gap: 1.5rem; 
+            min-height: 100vh; } 
+            .content { 
+                padding-top: 0.5rem; 
+                width: 100%; } 
+                /* HEADING */ 
+                
+                .content .heading {
+                     font-size: 2rem; 
+                     line-height: 1.15; 
+                     max-width: 100%; 
+                     margin: 0 auto 1rem; } 
+                     /* PARAGRAPH */
+                     .content .p1 {
+                         font-size: 1rem; 
+                         line-height: 1.45; 
+                         max-width: 100%; 
+                         margin: 0 auto 1.2rem; }}
